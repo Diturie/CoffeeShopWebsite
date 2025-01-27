@@ -1,0 +1,119 @@
+.services-container {
+  padding: 3rem 2rem;
+  background-color: #fdf3e5; 
+  text-align: center;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.services-header h4 {
+  color: #c47e48; 
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.services-header h2 {
+  font-size: 2.5rem;
+  color: #6b4226;
+  font-weight: bold;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Përshtat kolonat sipas madhësisë së ekranit */
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+  width: 100%; 
+  height: 300px; /* Lartësi fikse për konsistencë */
+  object-fit: cover; /* Siguron që imazhet mbajnë raportin e tyre të përmasave */
+}
+
+.service-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.service-content .icon {
+  font-size: 2.5rem; 
+  color: #d3a87c;
+  margin-bottom: 1rem;
+}
+
+.service-content h3 {
+  font-size: 1.5rem;
+  color: #6b4226;
+  margin-bottom: 0.5rem;
+}
+
+.service-content p {
+  font-size: 0.9rem;
+  color: #7d7d7d;
+  line-height: 1.6;
+}
+
+/* Responsivitet për ekranet më të vogla */
+@media (max-width: 768px) {
+  .services-header h2 {
+    font-size: 2rem; /* Zvogëlon madhësinë e titullit për tablet */
+  }
+
+  .services-grid {
+    gap: 1.5rem; /* Redukton hapësirën mes elementeve për ekranet më të vogla */
+  }
+
+  .service-item {
+    margin: 0 10px; /* Shton pak margjinë për të krijuar hapësirë */
+  }
+
+  .service-item img {
+    height: 250px; /* Zvogëlon lartësinë e imazhit për pajisje të vogla */
+  }
+
+  .service-content h3 {
+    font-size: 1.3rem; /* Madhësi më e vogël për titullin */
+  }
+
+  .service-content p {
+    font-size: 0.85rem; /* Madhësi më e vogël për përshkrimin */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-header h2 {
+    font-size: 1.8rem; /* Për ekranet e telefonave zvogëlohet madhësia */
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Një kolonë për ekranet e vogla */
+    gap: 1rem; /* Hapësirë më e vogël mes elementeve */
+  }
+
+  .service-item img {
+    height: 200px; /* Zvogëlon lartësinë për ekranet më të vogla */
+  }
+
+  .service-content h3 {
+    font-size: 1.2rem; /* Përshtat titullin për telefonat */
+  }
+
+  .service-content p {
+    font-size: 0.8rem; /* Zvogëlon tekstin për pajisje të vogla */
+  }
+}

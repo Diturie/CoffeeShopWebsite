@@ -1,0 +1,185 @@
+.menu-container {
+  text-align: center;
+  padding: 40px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf3e5;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.menu-container h2 {
+  font-size: 2.5rem;
+  color: #6b4226;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.menu-section {
+  flex: 1;
+  max-width: 45%;
+}
+
+.menu-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #d3a87c;
+  text-transform: uppercase;
+  border-bottom: 3px solid #d3a87c;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d3a87c;
+}
+
+.menu-details {
+  text-align: left;
+  flex: 1;
+}
+
+.menu-details h4 {
+  font-size: 1.4rem;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.menu-details p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0;
+}
+
+.menu-price {
+  font-size: 1.5rem;
+  color: #d3a87c;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .menu-section {
+    max-width: 100%;
+  }
+
+  .menu-container h2 {
+    font-size: 2rem;
+  }
+
+  .menu-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .menu-item {
+    flex-direction: column; /* Rreshtim vertikal për pajisje më të vogla */
+    text-align: center;
+  }
+
+  .menu-item img {
+    margin-bottom: 10px;
+  }
+
+  .menu-price {
+    margin: 0;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    padding: 20px;
+  }
+
+  .menu-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .menu-section h3 {
+    font-size: 1.4rem;
+  }
+
+  .menu-item {
+    padding: 10px 15px;
+    gap: 15px;
+  }
+
+  .menu-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .menu-details h4 {
+    font-size: 1.2rem;
+  }
+
+  .menu-price {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .menu-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .menu-item {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .menu-item img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .menu-details h4 {
+    font-size: 1rem;
+  }
+
+  .menu-details p {
+    font-size: 0.8rem;
+  }
+
+  .menu-price {
+    font-size: 1.2rem;
+  }
+}

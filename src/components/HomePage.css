@@ -1,0 +1,230 @@
+/* Homepage.css */
+
+.homepage {
+  text-align: center;
+  background: url('../assets/images/carousel-1.jpg') no-repeat center center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: overlay;
+  padding: 100px 20px;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.homepage-content h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #d3a87c;
+}
+
+.homepage-content h1 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 10px 0;
+  font-family: 'Dancing Script', cursive;
+}
+
+.reservation-btn {
+  padding: 10px 20px;
+  margin: 40px 20px;
+  font-size: 1rem;
+  background-color: #d3a87c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reservation-btn:hover {
+  background-color: #d8b796;
+}
+
+.reservation-box-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.reservation-box {
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  animation: scaleIn 0.3s ease-in-out;
+}
+
+.reservation-box h2 {
+  margin-top: 0;
+  font-size: 1.7rem;
+  color: #8b4513;
+  text-align: center;
+}
+
+.reservation-box label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.reservation-box input {
+  width: 100%;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #888;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #555;
+}
+
+.reservation-box-buttons {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.reservation-box-buttons button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #d2691e;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reservation-box-buttons button:hover {
+  background-color: #a0522d;
+}
+
+/* Animacione */
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .homepage {
+    padding: 80px 15px;
+  }
+
+  .homepage-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .homepage-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .reservation-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage-content h1 {
+    font-size: 2rem;
+  }
+
+  .homepage-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .reservation-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    margin: 30px 10px;
+  }
+
+  .reservation-box {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .reservation-box h2 {
+    font-size: 1.5rem;
+  }
+
+  .reservation-box-buttons button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  .reservation-box{
+    width:70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage {
+    padding: 60px 10px;
+  }
+
+  .homepage-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .homepage-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .reservation-btn {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
+
+  .reservation-box h2 {
+    font-size: 1.3rem;
+  }
+
+  .reservation-box input {
+    padding: 0.2rem;
+  }
+
+  .reservation-box-buttons button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

@@ -1,0 +1,165 @@
+.about-us-container {
+  padding: 2rem;
+  background-color: #fdf3e5;
+  color: #333;
+  text-align: center;
+  position: relative;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #6b4226;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content-item {
+  flex: 1;
+  max-width: 400px;
+  text-align: left;
+}
+
+.content-item h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #6b4226;
+}
+
+.content-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.content-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.content-item ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.content-item ul li::before {
+  content: "✔";
+  color: #d3a87c;
+  margin-right: 0.5rem;
+}
+
+.content-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.content-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.learn-more {
+  background-color: #d3a87c;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more:hover {
+  background-color: #ab7643;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #ab7643;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1;
+}
+
+.scroll-to-top:hover {
+  background-color: #a06c3c;
+  transform: scale(1.1);
+}
+
+.scroll-to-top i {
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .content-item, .content-image {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .content-item h3 {
+    font-size: 1.25rem;
+  }
+
+  .content-item p {
+    font-size: 0.9rem;
+  }
+
+  .learn-more {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-us-container {
+    padding: 1rem;
+  }
+
+  .main-title {
+    font-size: 1.75rem;
+  }
+
+  .scroll-to-top {
+    width: 40px;
+    height: 40px;
+  }
+
+  .scroll-to-top i {
+    font-size: 1rem;
+  }
+}
