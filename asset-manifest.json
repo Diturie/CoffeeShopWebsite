@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bd2dc8cb.css",
+    "main.js": "/static/js/main.32ce1a30.js",
+    "static/media/image3.jpg": "/static/media/image3.fa4d6282bc3ede721657.jpg",
+    "static/media/about.png": "/static/media/about.eaecffd48600a7dd44fd.png",
+    "static/media/icedAmericano.jpg": "/static/media/icedAmericano.67986e42fb2f421a8945.jpg",
+    "static/media/carousel-1.jpg": "/static/media/carousel-1.b9608dc768e7101c7503.jpg",
+    "static/media/image1.jpg": "/static/media/image1.058f62f714bc6b1dcfd5.jpg",
+    "static/media/image2.jpg": "/static/media/image2.3a04b82dd043904d60c1.jpg",
+    "static/media/Arabica.jpg": "/static/media/Arabica.d847eb69a12a3d502cd8.jpg",
+    "static/media/image4.jpg": "/static/media/image4.cfb9b7cabfb7344f92e0.jpg",
+    "static/media/cappucino.jpg": "/static/media/cappucino.cf017b18466182463d50.jpg",
+    "static/media/mocha.jpg": "/static/media/mocha.074020ad6c8f0ad0771f.jpg",
+    "static/media/flattWhite.jpg": "/static/media/flattWhite.b9236902d1c92d91c01c.jpg",
+    "static/media/coldBrew.jpg": "/static/media/coldBrew.1d75d060ffaef4fcbd8f.jpg",
+    "static/media/EspressoP.jpg": "/static/media/EspressoP.45709c501f5b7f1f1af5.jpg",
+    "static/media/Liberica.jpg": "/static/media/Liberica.7832214853105c7021e0.jpg",
+    "static/media/Latte.jpg": "/static/media/Latte.e662ef75babe55cbfab6.jpg",
+    "static/media/client8.jpg": "/static/media/client8.ebe22354474a8951f9ce.jpg",
+    "static/media/client6.jpg": "/static/media/client6.3ae91424972f3855bcc0.jpg",
+    "static/media/client4.jpg": "/static/media/client4.b30e9629cbd54eb0510a.jpg",
+    "static/media/client10.jpg": "/static/media/client10.8c367ee43d4e9a64dcfb.jpg",
+    "static/media/client11.jpg": "/static/media/client11.2367eecfdd53279ba7e0.jpg",
+    "static/media/client5.jpg": "/static/media/client5.e2635c8e1d4a8258ac41.jpg",
+    "static/media/client1.jpg": "/static/media/client1.2b45755cdd100aacad55.jpg",
+    "static/media/Excelsa.jpg": "/static/media/Excelsa.c71799ebf8e971121f95.jpg",
+    "static/media/client2.jpg": "/static/media/client2.692631c8846a91ca7d00.jpg",
+    "static/media/frapuccino.jpg": "/static/media/frapuccino.03fd039d729e9aeec91c.jpg",
+    "static/media/americano.jpg": "/static/media/americano.d6e61a25b69c23b88951.jpg",
+    "static/media/client12.jpg": "/static/media/client12.4f6d9ab6ac56aad50008.jpg",
+    "index.html": "/index.html",
+    "main.bd2dc8cb.css.map": "/static/css/main.bd2dc8cb.css.map",
+    "main.32ce1a30.js.map": "/static/js/main.32ce1a30.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bd2dc8cb.css",
+    "static/js/main.32ce1a30.js"
+  ]
+}
