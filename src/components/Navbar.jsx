@@ -3,11 +3,10 @@ import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-const Navbar = () => {
+const Navbar = ({ cartItems = [], removeFromCart }) => {
   const [showOrderBox, setShowOrderBox] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [cartItems, setCartItems] = useState([]);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,8 +29,10 @@ const Navbar = () => {
       return;
     }
 
+    // Show success message
     alert("Your order has been placed successfully!");
-    setCartItems([...cartItems, { orderDetails }]);
+    
+    // Reset the form and close the order box
     setShowOrderBox(false);
     setFormData({ name: "", email: "", orderDetails: "", address: "", phone: "" });
   };
@@ -64,10 +65,62 @@ const Navbar = () => {
           </button>
           <div className="cart-icon" onClick={() => setShowCart(!showCart)}>
             <FontAwesomeIcon icon={faShoppingCart} />
-            <span className="cart-count">{cartItems.length}</span>
+            {cartItems.length > 0 && <span className="cart-count">
+              {cartItems.reduce((total, item) => total + (item.quantity || 1), 0)}
+            </span>}
           </div>
         </div>
       </nav>
+
+      {/* Cart Dropdown */}
+      {showCart && (
+        <div className="cart-dropdown">
+          <h3>Your Cart</h3>
+          <div className="cart-items">
+            {cartItems.length === 0 ? (
+              <p>Your cart is empty</p>
+            ) : (
+              <>
+                {cartItems.map((item) => (
+                  <div key={item.id} className="cart-item">
+                    <div className="cart-item-details">
+                      <span className="cart-item-name">{item.name}</span>
+                      <span className="cart-item-quantity">x{item.quantity || 1}</span>
+                      <span className="cart-item-price">${(item.price * (item.quantity || 1)).toFixed(2)}</span>
+                    </div>
+                    <button 
+                      className="remove-item"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        removeFromCart(item.id);
+                      }}
+                    >
+                      ×
+                    </button>
+                  </div>
+                ))}
+                <div className="cart-total">
+                  <span>Total:</span>
+                  <span>$
+                    {cartItems
+                      .reduce((total, item) => total + (item.price * (item.quantity || 1)), 0)
+                      .toFixed(2)}
+                  </span>
+                </div>
+                <button 
+                  className="checkout-btn"
+                  onClick={() => {
+                    setShowOrderBox(true);
+                    setShowCart(false);
+                  }}
+                >
+                  Checkout
+                </button>
+              </>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Order Box */}
       {showOrderBox && (

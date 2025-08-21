@@ -38,7 +38,7 @@ const products = [
   },
 ];
 
-const Products = () => {
+const Products = ({ addToCart }) => {
   return (
     <div id="products" className="products-container">
       <h2>Products</h2>
@@ -51,7 +51,12 @@ const Products = () => {
               <span className="current-price">${product.price}</span>
               <span className="old-price">${product.oldPrice}</span>
             </div>
-            <button className="add-to-cart">Add to Cart</button>
+            <button 
+              className="add-to-cart" 
+              onClick={() => addToCart(product)}
+            >
+              Add to Cart
+            </button>
           </div>
         ))}
       </div>

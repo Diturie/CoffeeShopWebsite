@@ -13,7 +13,7 @@
 }
 
 .navbar-logo {
-  font-size: 1.5rem; /* Madhësi më e vogël për telefon */
+  font-size: 1.5rem; 
   font-weight: bold;
   font-family: 'Dancing Script', cursive;
   cursor: pointer;
@@ -49,8 +49,9 @@
 /* Actions: Order Now and Cart */
 .navbar-actions {
   display: flex;
-  gap: 0.5rem; /* Hapësirë më e vogël mes elementeve */
+  gap: 0.5rem;
   align-items: center;
+  position: relative;
 }
 
 .order-now-btn {
@@ -62,7 +63,7 @@
   cursor: pointer;
   border-radius: 8px;
   transition: background 0.3s ease;
-  white-space: nowrap; /* Parandalon ndarjen në dy rreshta */
+  white-space: nowrap; 
 }
 
 .order-now-btn:hover {
@@ -71,7 +72,7 @@
 
 .cart-icon {
   position: relative;
-  font-size: 1.2rem; /* Zvogëlim i madhësisë së ikonës */
+  font-size: 1.2rem; 
   cursor: pointer;
 }
 
@@ -157,7 +158,138 @@
   background: #d4a373;
 }
 
-/* Cart Box */
+/* Cart Dropdown */
+.cart-dropdown {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 320px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 15px;
+  color: #333;
+  max-height: 70vh;
+  overflow-y: auto;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cart-dropdown h3 {
+  margin: 0 0 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.cart-items {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-details {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.cart-item-name {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.cart-item-quantity,
+.cart-item-price {
+  font-size: 0.9rem;
+  color: #666;
+  margin-right: 10px;
+}
+
+.remove-item {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0 5px;
+  line-height: 1;
+}
+
+.remove-item:hover {
+  color: #ff0000;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ab7643;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.checkout-btn:hover {
+  background-color: #8a5f36;
+}
+
+/* Cart Icon */
+.cart-icon {
+  position: relative;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: 10px;
+}
+
+.cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #d4a373;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* Cart Box - Fallback */
 .cart-box {
   position: fixed;
   top: 20%;
@@ -168,36 +300,10 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   padding: 1rem;
   z-index: 150;
-}
-
-.cart-box h3 {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.cart-box ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.cart-box li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #ccc;
+  display: none; /* Hide the old cart box */
 }
 
 .close-cart-btn {
-  background: #d4a373;
-  color: white;
-  border: none;
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.close-cart-btn:hover {
   background: #ab7643;
 }
 /* Mobile Navigation (Hamburger Menu) */
