@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/CoffeeShopWebsite/static/css/main.99f3e768.css",
-    "main.js": "/CoffeeShopWebsite/static/js/main.7f0d871e.js",
+    "main.css": "/CoffeeShopWebsite/static/css/main.e56c4a55.css",
+    "main.js": "/CoffeeShopWebsite/static/js/main.7f10fb1d.js",
     "static/media/image3.jpg": "/CoffeeShopWebsite/static/media/image3.fa4d6282bc3ede721657.jpg",
     "static/media/about.png": "/CoffeeShopWebsite/static/media/about.eaecffd48600a7dd44fd.png",
     "static/media/icedAmericano.jpg": "/CoffeeShopWebsite/static/media/icedAmericano.67986e42fb2f421a8945.jpg",
@@ -30,11 +30,11 @@
     "static/media/americano.jpg": "/CoffeeShopWebsite/static/media/americano.d6e61a25b69c23b88951.jpg",
     "static/media/client12.jpg": "/CoffeeShopWebsite/static/media/client12.4f6d9ab6ac56aad50008.jpg",
     "index.html": "/CoffeeShopWebsite/index.html",
-    "main.99f3e768.css.map": "/CoffeeShopWebsite/static/css/main.99f3e768.css.map",
-    "main.7f0d871e.js.map": "/CoffeeShopWebsite/static/js/main.7f0d871e.js.map"
+    "main.e56c4a55.css.map": "/CoffeeShopWebsite/static/css/main.e56c4a55.css.map",
+    "main.7f10fb1d.js.map": "/CoffeeShopWebsite/static/js/main.7f10fb1d.js.map"
   },
   "entrypoints": [
-    "static/css/main.99f3e768.css",
-    "static/js/main.7f0d871e.js"
+    "static/css/main.e56c4a55.css",
+    "static/js/main.7f10fb1d.js"
   ]
 }
